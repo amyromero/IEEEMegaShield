@@ -665,6 +665,84 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="mega2560shield">
+<packages>
+<package name="TA11B">
+<pad name="1" x="-17.018" y="-11.2776" drill="1.524" shape="square"/>
+<pad name="2" x="-15.3162" y="-6.1976" drill="1.524"/>
+<pad name="3" x="-13.6144" y="-11.2776" drill="1.524"/>
+<pad name="4" x="-11.9126" y="-6.1976" drill="1.524"/>
+<pad name="5" x="-10.2108" y="-11.2776" drill="1.524"/>
+<pad name="6" x="-8.509" y="-6.1976" drill="1.524"/>
+<pad name="7" x="-6.8072" y="-11.2776" drill="1.524"/>
+<pad name="8" x="-5.1054" y="-6.1976" drill="1.524"/>
+<pad name="9" x="-3.4036" y="-11.2776" drill="1.524"/>
+<pad name="10" x="-1.7018" y="-6.1976" drill="1.524"/>
+<pad name="11" x="0" y="-11.2776" drill="1.524"/>
+<wire x1="-18.6436" y1="-7.9502" x2="1.6256" y2="-7.9502" width="0.1524" layer="51"/>
+<wire x1="1.6256" y1="-7.9502" x2="1.6256" y2="-3.3274" width="0.1524" layer="51"/>
+<wire x1="1.6256" y1="-3.3274" x2="-18.6436" y2="-3.3274" width="0.1524" layer="51"/>
+<wire x1="-18.6436" y1="-3.3274" x2="-18.6436" y2="-7.9502" width="0.1524" layer="51"/>
+<wire x1="-18.6436" y1="-7.9502" x2="1.6256" y2="-7.9502" width="0.1524" layer="25"/>
+<wire x1="1.6256" y1="-7.9502" x2="1.6256" y2="-3.3274" width="0.1524" layer="25"/>
+<wire x1="1.6256" y1="-3.3274" x2="-18.6436" y2="-3.3274" width="0.1524" layer="25"/>
+<wire x1="-18.6436" y1="-3.3274" x2="-18.6436" y2="-7.9502" width="0.1524" layer="25"/>
+<text x="-11.3792" y="-6.2738" size="1.27" layer="25" ratio="6" rot="SR0">&gt;NAME</text>
+<text x="-11.9634" y="-6.2738" size="1.27" layer="27" ratio="6" rot="SR0">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LMD18200T">
+<pin name="BS_1" x="0" y="0" length="middle" direction="pas"/>
+<pin name="OUT_1" x="0" y="-2.54" length="middle" direction="out"/>
+<pin name="DIR" x="0" y="-5.08" length="middle" direction="in"/>
+<pin name="BRAKE" x="0" y="-7.62" length="middle" direction="in"/>
+<pin name="PWM" x="0" y="-10.16" length="middle" direction="in"/>
+<pin name="VS" x="66.04" y="-12.7" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="66.04" y="-10.16" length="middle" direction="pwr" rot="R180"/>
+<pin name="I_SEN" x="66.04" y="-7.62" length="middle" direction="out" rot="R180"/>
+<pin name="THERM" x="66.04" y="-5.08" length="middle" direction="out" rot="R180"/>
+<pin name="OUT_2" x="66.04" y="-2.54" length="middle" direction="out" rot="R180"/>
+<pin name="BS_2" x="66.04" y="0" length="middle" direction="pas" rot="R180"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-17.78" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-17.78" x2="58.42" y2="-17.78" width="0.1524" layer="94"/>
+<wire x1="58.42" y1="-17.78" x2="58.42" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="58.42" y1="5.08" x2="7.62" y2="5.08" width="0.1524" layer="94"/>
+<text x="28.2956" y="9.1186" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;NAME</text>
+<text x="27.3558" y="6.5786" size="2.0828" layer="96" ratio="6" rot="SR0">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LMD18200_NDJ_11">
+<gates>
+<gate name="A" symbol="LMD18200T" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TA11B">
+<connects>
+<connect gate="A" pin="BRAKE" pad="4"/>
+<connect gate="A" pin="BS_1" pad="1"/>
+<connect gate="A" pin="BS_2" pad="11"/>
+<connect gate="A" pin="DIR" pad="3"/>
+<connect gate="A" pin="GND" pad="7"/>
+<connect gate="A" pin="I_SEN" pad="8"/>
+<connect gate="A" pin="OUT_1" pad="2"/>
+<connect gate="A" pin="OUT_2" pad="10"/>
+<connect gate="A" pin="PWM" pad="5"/>
+<connect gate="A" pin="THERM" pad="9"/>
+<connect gate="A" pin="VS" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="lmd18200tnopb" constant="no"/>
+<attribute name="VENDOR" value="National" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -703,6 +781,8 @@ W = angled&lt;p&gt;
 <part name="JP5" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="JP6" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="SV1" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="U$1" library="mega2560shield" deviceset="LMD18200_NDJ_11" device=""/>
+<part name="U$2" library="mega2560shield" deviceset="LMD18200_NDJ_11" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -848,6 +928,8 @@ W = angled&lt;p&gt;
 <attribute name="VALUE" x="331.47" y="119.38" size="1.778" layer="96"/>
 </instance>
 <instance part="SV1" gate="1" x="91.44" y="127"/>
+<instance part="U$1" gate="A" x="-10.16" y="167.64"/>
+<instance part="U$2" gate="A" x="-10.16" y="124.46"/>
 </instances>
 <busses>
 </busses>
