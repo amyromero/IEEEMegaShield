@@ -1,0 +1,22 @@
+[Eagle]
+Version="06 05 00"
+Platform="Windows"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="C:/Users/Amy/Documents/eagle/Eagle Library/Brians_Library.lbr"
+UsedLibrary="C:/Users/Amy/Documents/eagle/Eagle Library/Seminar Board/lbr/19inch.lbr"
+UsedLibrary="C:/Users/Amy/Documents/eagle/Eagle Library/IEEE Robotics/PTN78020WAH.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="255 176 854 575"
+State=1
+Number=0
+
+[Desktop]
+Screen="1366 768"
+Window="Win_1"
